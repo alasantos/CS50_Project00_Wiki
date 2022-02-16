@@ -8,13 +8,12 @@ import random
 
 from . import util
 
-
 class NewArticleForm( forms.Form ):
     Title = forms.CharField(label='Title ', required="true")
     description = forms.CharField( label='Description ', required="true", widget=forms.Textarea( attrs= { 'rows': 5, 'cols': 20 } ) )
 
 
-
+#################
 def addTitle( request, Title = None ):
     ''' addTitle view '''
     context = {
@@ -35,6 +34,7 @@ def addTitle( request, Title = None ):
     return render( request, "encyclopedia/addTitle.html", context ) 
     #return HttpResponseRedirect( reverse( "encyclopedia:addTitle", args=context))
 
+#################
 def edit_title(request, TITLE ):
     form = NewArticleForm(request.POST or None)
     if TITLE != None and request.method == "GET":
@@ -59,13 +59,14 @@ def edit_title(request, TITLE ):
                     }  
                  )
 
-
+#################
 def index(request):
     ''' Home view '''
     return render(request, "encyclopedia/index.html", {
                     "entries": util.list_entries()
     })
 
+#################
 def get_title(request, TITLE):
     ''' Retrieves a requested title '''
     result = message = None
@@ -83,6 +84,7 @@ def get_title(request, TITLE):
                   )
 
 
+#################
 def search_title( request ):
     ''' Search solution entry point '''
     msg = None
@@ -103,6 +105,7 @@ def search_title( request ):
                             }
                 )
 
+#################
 def random_title (request):
     ''' Random article entry point '''
     article = message = None
