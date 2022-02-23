@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    background-color: white;
+}
+
+code {
+    white-space: pre;
+}
+
+newarticle_label{
+    white-space: pre;
+    align-content: top;
+    color: purple;
+}
+
+h1 {
+    margin-top: 0px;
+    padding-top: 20px;
+}
+
+h2 {
+    margin-top: 0px;
+    padding-top: 10px;
+}
+
+textarea {
+    height: 30vh;
+    width: 50%;
+}
+
+.errorMsg {
+    font-size:20px;
+    color: red;
+    font-weight: bold;
+
+}
+.main {
+    padding: 10px;
+}
+
+.search {
+    width: 100%;
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.sidebar {
+    background-color: #f0f0f0;
+    height: 100vh;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-top: 5px;
+}
